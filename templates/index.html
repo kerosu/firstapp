@@ -1,0 +1,146 @@
+<html>
+<title>Adamson</title>
+<head>
+<meta charset="UTF-8">
+<!-- stylesheets -->
+<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
+<link href="/normalize.css" rel="stylesheet">
+<style>
+/*  ul.dropdown-menu {
+    background-color: 	#00ffff;
+} */
+  footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+    header {
+      text-align: center;
+      background: url('http://dash.ga.co/assets/jeff-bg.png');
+      background-size: cover;
+      color: white;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 70px;
+    }
+    img {
+      margin: 40px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+    ul {
+      padding: 20px;
+      background: rgba(0,0,0,0.5);
+    }
+    li {
+	  font-size: 25px;
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+div{
+
+    background: url("http://dash.ga.co/assets/anna-bg.png");
+}
+    article {
+
+  /*     background-color: tomato;*/
+      max-width: 650px;
+      padding: 20px;
+      margin: 0 auto;
+	  color: white;
+    }
+    @media (max-width: 650px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+    }
+	h2 {
+	color:orange;
+    text-align: left;
+}
+.button {
+    background-color: #1E90FF; /* blue */
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {border-radius: 2px;}
+  </style>
+<meta   charset="utf-8"  name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<header>
+    <img src="../uploads/adj.jpeg"     width="260" height="300">
+    <h1>AI AROUND THE WORLD</h1>
+    <ul>
+      <li  ><a href="/Aboutme" >About Me</a></li>
+      <li><a href="/">Image Classification</a></li>
+
+      <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/Article">Article
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu"    >
+            <li><a href="/Game" >Game of thrones</a></li>
+            <li><a href="/Article1" >Extras</a></li>
+            <li><a href="/Article" >Media</a></li>
+          </ul>
+        </li>
+	   <li><a href="/Airesource">AI Resources</a></li>
+    </ul>
+  </header>
+
+<div class="row">
+
+  <div class="col-md-7">
+
+    <h2 style="color:orange;" >Flowers AI - Daisy, Rose or Sunflowers ?</h2>
+<!--	<h3  >Upload a flower image</h3>  -->
+    <br>
+    <form action="" method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+
+    <h2  style="color:orange;">Results</h2>
+    <br>
+    <table class="table" id="results-table">
+        <tr>
+
+          <th style="font-size:25px;color:white;background-color:powderblue;" >Image</th>
+          <th style="font-size:25px;color:white;background-color:powderblue;" >Prediction</th>
+        </tr>
+		<tr>
+          {% block content %}{% endblock %}
+        </tr>
+    </table>
+  </div>
+
+</div>
+<footer>Copyright &copy; adamsonai.com</footer>
+</body>
+
+</html>

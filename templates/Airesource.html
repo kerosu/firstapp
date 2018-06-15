@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<title>Adamson</title>
+<head>
+  <meta charset="UTF-8">
+  <link href="/normalize.css" rel="stylesheet">
+  <style>
+/*  ul.dropdown-menu {
+    background-color: 	#00ffff;
+}*/
+  footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+    header {
+      text-align: center;
+      background: url('http://dash.ga.co/assets/jeff-bg.png');
+      background-size: cover;
+      color: white;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 70px;
+    }
+    img {
+      margin: 40px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+    ul {
+      padding: 20px;
+      background: rgba(0,0,0,0.5);
+    }
+    li {
+	  font-size: 25px;
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+div{
+    background: url("http://dash.ga.co/assets/anna-bg.png");
+}
+    article {
+
+  /*     background-color: tomato;*/
+      max-width: 650px;
+      padding: 20px;
+      margin: 0 auto;
+	  color: white;
+    }
+    @media (max-width: 650px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+    }
+	h2 {
+    text-align: left;
+}
+.button {
+    background-color: #1E90FF; /* blue */
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {border-radius: 2px;}
+  </style>
+
+  <meta   charset="utf-8"  name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <img src={{url_for('static',filename="adj.jpeg")}}  width="260" height="300"/>
+    <h1>AI AROUND THE WORLD</h1>
+    <ul>
+      <li><a href="/Aboutme">About Me</a></li>
+      <li><a href="/">Image Classification</a></li>
+
+      <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Article
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu"    >
+            <li><a href="/Game" >Game of thrones</a></li>
+            <li><a href="/Article1" >Extras</a></li>
+            <li><a href="/Article" >Media</a></li>
+          </ul>
+        </li>
+			 <li><a href="#">AI Resources</a></li>
+    </ul>
+  </header>
+<div>
+  <article>
+ <h2  id="test1" >python 函數與方法快速理解</h2>
+    <p>以下是粗淺的判斷方式
+
+首先
+
+函數和方法都是"函數!"
+
+會稱作的"函數"的如: len,max,min,sum,int.........
+
+即所謂的內建函式
+
+可用在各個地方ex:len((a,b,c,d))  len([a,b,c,d])
+
+可以看出len函數在tuple、list 都適用
+
+再來看所謂的"方法":
+
+第一類:通常你可能需要 import  (      )   ；(     )  可以是math、random 、numpy
+
+math.sin(x)  math.gcd(x,y)
+
+sin() 和 gcd() 函數只在math的模組下能被叫用 ，此時我們稱其為方法</P>
+<p>
+第二類:我們來看看list 與 tuple
+
+list.append(x)  list.remove(x) 中的append、remove 都是屬於list 類別下的方法
+
+若是你將append 應用到tuple
+
+t1=(1,2,3,4)
+
+t1.append(5)
+
+你會得到:AttributeError: 'tuple' object has no attribute 'append'
+
+              也就是append 是在特定類別才能使用的函數，我們通常稱其為方法!!!fe cray tumblr retro.</p>
+    <button   class="button button1">Like</button>  </article>
+<article>
+<h2  id="test2" >輕鬆在python 創建自己的module</h2>
+    <p>用python必然會常常在使用各種module
+
+例如:import numpy as np
+
+
+
+
+
+或者:import pandas as pd
+
+或者初學mechine learning 會碰到的"from sklearn.datasets import load_iris"
+
+我們現在就來創建屬於自己的第一個module
+
+總共分三個部分a.module   b. 啟動程式   c.叫用python的程式
+
+為了方便管理  我們會創個資料夾並加入b &c
+
+
+
+a.module部分:
+
+我們來定義一個簡單的function</P>
+<p>
+c.叫用python程式
+
+我們在叫用程式打上常用的from (module) import (method)
+
+並加入 module.method
+
+ </p>
+    <button     class="button button1" >Like</button>
+  </article>
+ <!-- <article>
+    <h2>Sartorial synth Echo Park, roof party</h2>
+    <p>chambray you probably haven't heard of them pour-over viral selvage umami skateboard VHS post-ironic selfies. Wes Anderson gentrify fanny pack twee, bicycle rights bitters blog keffiyeh plaid flannel. Tonx irony cliche sustainable mlkshk bitters. Four loko leggings chambray Vice.</p>
+    <button>Like</button>
+  </article>
+  <article>
+    <h2>Forage food truck keytar master cleanse</h2>
+    <p>ethical thundercats sustainable locavore quinoa Neutra. Aesthetic tacky sweater single-origin coffee, bicycle rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage YOLO polaroid</p>
+    <button>Like</button>
+  </article>   -->
+</div>
+<footer>Copyright &copy; adamsonai.com</footer>
+  <script>
+    $("button").on("click", function() {
+      alert("Clicked!");
+    });
+  </script>
+</body>
